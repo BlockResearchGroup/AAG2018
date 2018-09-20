@@ -428,7 +428,8 @@ if __name__ == '__main__':
     #mesh_smooth_centroid(coons_mesh, fixed=fixed, kmax=5,damping=0.5)
     
     artist = MeshArtist(coons_mesh, layer='form_quad')
+#    artist.draw()
     artist.draw_edges()
-    artist.draw_vertices()
-    artist.draw_faces()
-    artist.redraw()
+#    artist.draw_vertices()
+#    artist.draw_faces()
+#    artist.redraw()
