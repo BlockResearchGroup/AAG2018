@@ -1,8 +1,3 @@
-#import time
-#
-#tic = time.time()
-#
-
 import rhinoscriptsyntax as rs
 
 import json
@@ -11,21 +6,18 @@ import itertools
 import copy
 
 from compas.datastructures import Mesh
-
-
 from compas.datastructures import Network
+from compas.datastructures.mesh.operations import meshes_join 
+
 from compas.utilities import geometric_key
 
 from compas.topology import depth_first_tree
 
 from compas.geometry import centroid_points
 from compas.geometry import discrete_coons_patch
-from compas.geometry import mesh_cull_duplicate_vertices
-
 from compas.geometry import add_vectors
 from compas.geometry import subtract_vectors
 from compas.geometry import scale_vector
-
 from compas.geometry import mesh_smooth_area
 from compas.geometry import mesh_smooth_centroid
 
@@ -168,7 +160,6 @@ def find_devisions(mesh, edge_groups, trg_len):
     edges = set(mesh.edges())
     coons_meshes = []
     
-    
     for fkey in mesh.faces():
            
         if mesh.get_face_attribute(fkey,'opening'):
@@ -187,7 +178,6 @@ def find_devisions(mesh, edge_groups, trg_len):
             pts_coon.append(pts)
             
         # handle triangles correctly based on user input (flag 0 - 2)
-        lengths = [len(pts_coon[0]), len(pts_coon[1])]
         if len(h_edges) == 4:
             ab,bc,dc,ad = pts_coon
         else:
@@ -196,7 +186,6 @@ def find_devisions(mesh, edge_groups, trg_len):
                 ab,bc,dc,ad = pts_coon[0],pts_coon[1],[],pts_coon[2]
             elif flag == 1:
                 ab,bc,dc,ad = pts_coon[0],[],pts_coon[1],pts_coon[2]
-                lengths = [len(pts_coon[0]), len(pts_coon[2])]
             elif flag == 2:
                 ab,bc,dc,ad = pts_coon[0],pts_coon[1],pts_coon[2],[]
                 
@@ -204,44 +193,13 @@ def find_devisions(mesh, edge_groups, trg_len):
         dc.reverse()
         ad.reverse()
             
-
         try: #this try except is a bit of a hack to make the openings work (needs revision)
             vertices, faces = discrete_coons_patch(ab,bc,dc,ad)
-            coons_meshes.append((vertices, faces, lengths))
+            coons_meshes.append(Mesh.from_vertices_and_faces(vertices, faces))
         except:
             pass
-        
-
-    # join al sub "meshes" of the coons patches in one mesh (with duplicate vertices)
-    inc = 0
-    mesh = Mesh()
-    for coons_mesh in coons_meshes:
-        vertices, faces, lengths = coons_mesh
-        
-        a, b = lengths
-        
-        indices = []
-        for i,pt in enumerate(vertices):
-            indices.append(i)
-        
-        indices = indices[::b] + indices[b-1::b]+ indices[:b] + indices[(a-1)*b:]
-        indices = set(indices)
-        
-        
-        for i,pt in enumerate(vertices):
-            if i in indices:
-                attr = {'coon_bound' : True}
-            else:
-                attr = {'coon_bound' : False}
-            mesh.add_vertex(i + inc, x=pt[0], y=pt[1], z=pt[2], attr_dict=attr)
-        
-        for face in faces:
-            face = [key + inc for key in face]
-            mesh.add_face(face)
-        inc += len(vertices)
-        
     
-    return mesh
+    return coons_meshes
     
 
 def set_tri_corners(mesh):
@@ -264,14 +222,11 @@ def set_tri_corners(mesh):
             rs.TextDotHeight(dot,6)
             dots[str(dot)] = (fkey,i)
     
-    
     rs.EnableRedraw(True)
     if not dots:
         return None
     
     dot_ids = dots.keys()
-    
-    
     data = rs.GetObjectsEx(message="Select face dot", filter=0, preselect=False, select=False, objects=dot_ids)
     
     rs.DeleteObjects(dot_ids)
@@ -290,9 +245,10 @@ def set_tri_corners(mesh):
 def lines_from_mesh(mesh):
     return [mesh.edge_coordinates(u,v) for u,v in mesh.edges()]
 
-def group_and_mesh(mesh, trg_len):
+def group_and_mesh(mesh, trg_len, precision):
     edge_groups = find_groups(mesh)
-    coons_mesh = find_devisions(mesh, edge_groups, trg_len)
+    coons_meshes = find_devisions(mesh, edge_groups, trg_len)
+    coons_mesh = meshes_join(coons_meshes, cull_duplicates=False, precision=precision)
     return coons_mesh
 
 def get_initial_mesh(precision):
@@ -313,7 +269,6 @@ def get_initial_mesh(precision):
     
     mesh = Mesh.from_lines(lines, delete_boundary_face=True, precision=precision)
         
-            
     geo_edges = []
     for u,v, attr in mesh.edges(True):
         pt_u, pt_v = mesh.edge_coordinates(u,v)
@@ -384,15 +339,14 @@ if __name__ == '__main__':
     #----------------------------------------
     
     
-    coons_mesh = group_and_mesh(mesh, trg_len)
+    coons_mesh = group_and_mesh(mesh, trg_len, precision)
     mesh_lines = lines_from_mesh(coons_mesh)
-    
     
     conduit = LinesConduit(mesh_lines)
  
     with conduit.enabled():
         while True:
-            coons_mesh = group_and_mesh(mesh, trg_len)
+            coons_mesh = group_and_mesh(mesh, trg_len, precision)
             mesh_lines = lines_from_mesh(coons_mesh)
             
             conduit.lines = mesh_lines
@@ -421,15 +375,15 @@ if __name__ == '__main__':
                 break
             
     
-    mesh_cull_duplicate_vertices(coons_mesh, precision)
-    
+    coons_mesh = meshes_join([coons_mesh], cull_duplicates=True, precision=precision)
     fixed = coons_mesh.vertices_on_boundary()
+    
     #mesh_smooth_area(coons_mesh, fixed=fixed, kmax=25,damping=0.5)
-    #mesh_smooth_centroid(coons_mesh, fixed=fixed, kmax=5,damping=0.5)
+    #mesh_smooth_centroid(coons_mesh, fixed=fixed, kmax=25,damping=0.5)
     
     artist = MeshArtist(coons_mesh, layer='form_quad')
-#    artist.draw()
-    artist.draw_edges()
+    artist.draw()
+#    artist.draw_edges()
 #    artist.draw_vertices()
 #    artist.draw_faces()
 #    artist.redraw()
