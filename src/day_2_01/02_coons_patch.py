@@ -41,9 +41,9 @@ def sort_pts(sets_pts):
 if __name__ == '__main__':
     
     
-    div = 20
+    div = 15
     
-    crvs = rs.GetObjects("Select four curves (in order)", 4)
+    crvs = rs.GetObjects("Select four curves", 4)
 
     sets_pts = [rs.DivideCurve(crv, div) for crv in crvs]
 

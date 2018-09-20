@@ -271,7 +271,6 @@ def get_initial_mesh(precision):
     
     mesh = Mesh.from_lines(lines, delete_boundary_face=True, precision=precision)
         
-    geo_edges = []
     for u,v, attr in mesh.edges(True):
         pt_u, pt_v = mesh.edge_coordinates(u,v)
         geo_u, geo_v = geometric_key(pt_u,precision), geometric_key(pt_v,precision)

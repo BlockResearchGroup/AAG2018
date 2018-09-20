@@ -11,7 +11,7 @@ from compas_rhino.artists.meshartist import MeshArtist
 if __name__ == '__main__':
     
     
-    div = 10
+    div = 15
     
     crvs = rs.GetObjects("Select four curves (in order)", 4)
 
