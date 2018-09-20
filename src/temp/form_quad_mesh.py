@@ -193,6 +193,8 @@ def find_devisions(mesh, edge_groups, trg_len):
         dc.reverse()
         ad.reverse()
             
+        
+            
         try: #this try except is a bit of a hack to make the openings work (needs revision)
             vertices, faces = discrete_coons_patch(ab,bc,dc,ad)
             coons_meshes.append(Mesh.from_vertices_and_faces(vertices, faces))
@@ -333,7 +335,7 @@ if __name__ == '__main__':
     #----------------------------------------
     #----------------------------------------
     precision = '3f'
-    trg_len = 0.75
+    trg_len = 0.7
     mesh = get_initial_mesh(precision)
     #----------------------------------------
     #----------------------------------------
@@ -383,7 +385,4 @@ if __name__ == '__main__':
     
     artist = MeshArtist(coons_mesh, layer='form_quad')
     artist.draw()
-#    artist.draw_edges()
-#    artist.draw_vertices()
-#    artist.draw_faces()
-#    artist.redraw()
+

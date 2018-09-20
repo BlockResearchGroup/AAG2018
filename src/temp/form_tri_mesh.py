@@ -65,7 +65,7 @@ if __name__ == '__main__':
     #----------------------------------------
     #----------------------------------------
     precision = '3f'
-    trg_length = .75
+    trg_length = .7
 
     #select all boundaries and internal crease curves
     crvs = rs.GetObjects("Select boundary and crease curves", 4, group=True, preselect=False, select=False, objects=None, minimum_count=3, maximum_count=0)
@@ -161,8 +161,5 @@ if __name__ == '__main__':
     mesh_diagram = join_meshes(delaunay_meshes, cull_duplicates=True, precision=precision)
     
     artist = MeshArtist(mesh_diagram, layer='form_tri')
-    artist.draw_faces()
-    artist.draw_vertices()
-    artist.redraw()
-                
+    artist.draw()
 
