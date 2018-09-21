@@ -13,15 +13,18 @@ from compas_rhino.conduits import MeshConduit
 def callback(k, args):
     if k%10 == 0:
         rs.Prompt(str(k))
-    conduit.redraw()
     
+    # constrain all non-fixed to a surface
     for key, attr in mesh.vertices(data=True):
+        if key in fixed:
+            continue
         srf = attr['srf']
         x, y, z = rs.BrepClosestPoint(srf,mesh.vertex_coordinates(key))[0]
         attr['x'] = x
         attr['y'] = y
         attr['z'] = z
-
+        
+    conduit.redraw()
 
 if __name__ == '__main__':
     
@@ -33,7 +36,6 @@ if __name__ == '__main__':
 
     for key in mesh.vertices():
         mesh.set_vertex_attribute(key, 'srf', srf)
-
 
     # initialize conduit
     conduit = MeshConduit(mesh, refreshrate=1)

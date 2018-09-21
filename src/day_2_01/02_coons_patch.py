@@ -21,11 +21,11 @@ def sort_pts(sets_pts):
         for i, set_pts in enumerate(sets_pts):
             #alternative for a more "forgiving" point comparison
             #geometric_key(set_pts[0]) == geometric_key(start_pt)
-            if set_pts[0] == start_pt:
+            if geometric_key(set_pts[0]) == geometric_key(start_pt):
                 start_pt = set_pts[-1]
                 new_sets_pts.append(set_pts)
                 sets_pts.pop(i)
-            elif set_pts[-1] == start_pt:
+            elif geometric_key(set_pts[-1]) == geometric_key(start_pt):
                 start_pt = set_pts[0]
                 set_pts.reverse()
                 new_sets_pts.append(set_pts)
