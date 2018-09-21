@@ -13,6 +13,7 @@ from compas_rhino.conduits import MeshConduit
 def callback(k, args):
     if k%10 == 0:
         rs.Prompt(str(k))
+        
     conduit.redraw()
 
 
