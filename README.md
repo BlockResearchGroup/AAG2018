@@ -9,9 +9,11 @@
 
 **Install compas_tna**
 
-Clone the repo:
+1. Clone the repo:
 
-	$ git clone https://github.com/BlockResearchGroup/compas_tna.git
+```bash
+$ git clone https://github.com/BlockResearchGroup/compas_tna.git
+```
 
 The folder `compas_tna` will contain the following:
 
@@ -24,18 +26,50 @@ The folder `compas_tna` will contain the following:
 
 And a bunch of other files...
 
-Install compas_tna from source:
+2. Install compas_tna from source:
 
-	$ cd compas_tna
-	$ pip install -e .
-
+```bash
+$ cd compas_tna
+$ pip install -e .
+```
 
 **Configure Rhino**
 
-In Rhino go to:
+1. In Rhino go to:
 
-	Tools > PythonScript > Edit > Tools > Options
+```
+Tools > PythonScript > Edit > Tools > Options
+```
 
-Add the path to `compas_tna/src` (see above) to the *Module Search Paths*.
+2. Add the path to `compas_tna/src` (see above) to the *Module Search Paths*.
 
-Restart Rhino...
+3. Restart Rhino...
+
+4. Test:
+
+```python
+import compas
+import compas_tna
+```
+
+## Interactive drawings
+
+[eQUILIBRIUM](http://block.arch.ethz.ch/eq)
+
+* [Single panel truss](http://block.arch.ethz.ch/eq/drawing/view/36)
+* [Funicular line through two points](http://block.arch.ethz.ch/eq/drawing/view/5)
+* [Minimum and maximum thrust in a masonry arch](http://block.arch.ethz.ch/eq/drawing/view/16)
+
+
+## Reading
+
+* [Geometry-based Understanding of Structures](http://block.arch.ethz.ch/brg/publications/399)
+* [Algebraic Graph Statics](http://block.arch.ethz.ch/brg/publications/413)
+* [Thrust Network Analysis: A new methodology for three-dimensional equilibrium](http://block.arch.ethz.ch/brg/publications/355)
+* [Form Finding to Fabrication: A digital design process for masonry vaults](http://block.arch.ethz.ch/brg/publications/368)
+* [Armadillo Vault - An extreme discrete stone shell](http://block.arch.ethz.ch/brg/publications/646)
+
+
+## Questions
+
+*We will list here the answers to recurring questions that come up during the workshop...*
