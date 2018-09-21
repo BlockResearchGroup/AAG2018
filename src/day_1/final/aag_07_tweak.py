@@ -18,8 +18,8 @@ from compas_tna.equilibrium import vertical_from_zmax_rhino as vertical
 
 # create diagrams from serialised files
 
-form = FormDiagram.from_json('aag_06_formdiagram_distribution.json')
-force = ForceDiagram.from_json('aag_06_forcediagram_distribution.json')
+form = FormDiagram.from_json('aag_06_distribution_formdiagram.json')
+force = ForceDiagram.from_json('aag_06_distribution_forcediagram.json')
 
 
 # visualise the diagrams
@@ -65,5 +65,5 @@ artist.redraw()
 
 # serialise the data
 
-form.to_json('aag_06_formdiagram_distribution.json')
-force.to_json('aag_06_forcediagram_distribution.json')
+form.to_json('aag_06_distribution_formdiagram.json')
+force.to_json('aag_06_distribution_forcediagram.json')

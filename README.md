@@ -28,7 +28,9 @@
 
 ### Day 2
 
-*Fabrication design of *
+*Fabrication design of a discrete vault*
+
+Details coming soon...
 
 
 ## Getting started

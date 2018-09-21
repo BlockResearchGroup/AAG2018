@@ -27,7 +27,7 @@ mesh_smooth_area(form, fixed=fixed, kmax=50)
 
 # serialise the result
 
-form.to_json('aag_02_formdiagram_smooth_area.json')
+form.to_json('aag_02_formdiagram.json')
 
 
 # draw the result in the layer AAG > FormDiagram
