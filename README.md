@@ -9,12 +9,33 @@
 
 **Install compas_tna**
 
-1. Clone the repo
+Clone the repo:
 
 	$ git clone https://github.com/BlockResearchGroup/compas_tna.git
 
-2. Install from source
+The folder `compas_tna` will contain the following:
 
+* data
+* docs
+* docsource
+* examples
+* src
+* temp
+
+And a bunch of other files...
+
+Install compas_tna from source:
+
+	$ cd compas_tna
 	$ pip install -e .
 
-3. Add compas_tna to the Rhino search paths
+
+**Configure Rhino**
+
+In Rhino go to:
+
+	Tools > PythonScript > Edit > Tools > Options
+
+Add the path to `compas_tna/src` (see above) to the *Module Search Paths*.
+
+Restart Rhino...
