@@ -1,4 +1,35 @@
-# AAG2018
+# AAG2018 Workshop 3
+
+*Architectural Geometry and Structural Design with COMPAS*
+
+![Armadillo workflow](images/aag2018_ws3_BRG.jpg)
+
+## Schedule
+
+### Day 1
+
+**Morning**
+
+* Introduction
+* Graphic Statics
+* COMPAS
+
+**Afternoon**
+
+*Structural design of a thrust network with compas_tna*
+
+0. Form diagram from lines
+1. Form diagram from mesh
+2. Form diagram smoothing
+3. Force diagram from form diagram
+4. Horizontal equilibrium
+5. Vertical equilibrium
+6. Force distribution
+
+### Day 2
+
+*Fabrication design of *
+
 
 ## Getting started
 
@@ -51,6 +82,7 @@ Tools > PythonScript > Edit > Tools > Options
 import compas
 import compas_tna
 ```
+
 
 ## Interactive drawings
 
