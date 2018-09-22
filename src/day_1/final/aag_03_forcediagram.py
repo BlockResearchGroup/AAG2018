@@ -12,7 +12,7 @@ from compas_tna.rhino import DiagramHelper
 
 # create a form diagram from a serialised file
 
-form = FormDiagram.from_json('aag_02_formdiagram_smooth_area.json')
+form = FormDiagram.from_json('aag_02_formdiagram.json')
 
 
 # create a force diagram from the form diagram
