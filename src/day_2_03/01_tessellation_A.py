@@ -44,16 +44,20 @@ def get_parallel_edges(mesh, uv):
 
 if __name__ == '__main__':
     
-    guid = rs.GetObject("Select mesh", 32)
-    mesh = mesh_from_guid(Mesh,guid)
+    edge_crvs = rs.GetObjects("Select edges", 4)
+    lines = get_line_coordinates(edge_crvs)
+    
+    mesh = Mesh.from_lines(lines, delete_boundary_face=True)
 
     # draw edges for selection
-    artist = MeshArtist(mesh, layer='edges')
+    artist = MeshArtist(mesh, layer='joint_lines')
     artist.draw_edges()
     artist.redraw()
     
     # select edge
+    rs.HideObjects(edge_crvs)
     edges = mesh_select_edges(mesh)
+    rs.ShowObjects(edge_crvs)
     
     # clear edges
     artist.clear_edges()

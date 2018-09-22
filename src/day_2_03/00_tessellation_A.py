@@ -32,11 +32,10 @@ def sort_pts(sets_pts):
                 set_pts.reverse()
                 new_sets_pts.append(set_pts)
                 sets_pts.pop(i)
-        count += 1
-        print count
+                
         if count > 100:
             break
-                
+        count += 1
     return new_sets_pts
 
 
@@ -65,7 +64,7 @@ if __name__ == '__main__':
     trg_l = 0.65
     kmax = 300
 
-    crvs = rs.GetObjects("Select four curves", 4)
+    crvs = rs.GetObjects("Select boundary curves", 4)
     srf = rs.GetObject("Select nurbs srf", 8)
     
     sets_pts = [rs.DivideCurve(crv, round(rs.CurveLength(crv)/trg_l,0)) for crv in crvs]
@@ -108,3 +107,4 @@ if __name__ == '__main__':
     
     artist = MeshArtist(dual_mesh, layer='dual')
     artist.draw_edges(color=[255,0,0])
+    artist.redraw()

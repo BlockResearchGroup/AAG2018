@@ -78,7 +78,7 @@ if __name__ == '__main__':
     with conduit.enabled():
         mesh_smooth_area(mesh, 
                             fixed=fixed, 
-                            kmax=400, 
+                            kmax=200, 
                             damping=0.5, 
                             callback=callback)
         
