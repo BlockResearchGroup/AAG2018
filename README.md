@@ -8,15 +8,7 @@
 
 ### Day 1
 
-**Morning**
-
-* Introduction
-* Graphic Statics
-* COMPAS
-
-**Afternoon**
-
-*Structural design of a thrust network with compas_tna*
+*Structural design of a thrust network with **compas_tna***
 
 0. Form diagram from lines
 1. Form diagram from mesh
@@ -59,7 +51,7 @@ The folder `compas_tna` will contain the following:
 
 And a bunch of other files...
 
-2. Install compas_tna from source:
+2. Install **compas_tna** from source:
 
 ```bash
 $ cd compas_tna
@@ -78,7 +70,7 @@ Tools > PythonScript > Edit > Tools > Options
 
 3. Restart Rhino...
 
-4. Test:
+4. Test, by making a script with the following two lines and running it in Rhino. If there are no errors, all is well :)
 
 ```python
 import compas
