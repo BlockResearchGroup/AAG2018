@@ -17,6 +17,7 @@ def sort_pts(sets_pts):
     new_sets_pts = [sets_pts[0]]
     sets_pts.pop(0)
     
+    count = 0
     while sets_pts:
         for i, set_pts in enumerate(sets_pts):
             #alternative for a more "forgiving" point comparison
@@ -30,6 +31,10 @@ def sort_pts(sets_pts):
                 set_pts.reverse()
                 new_sets_pts.append(set_pts)
                 sets_pts.pop(i)
+               
+        if count > 100:
+            break
+        count += 1
                 
     #coons patch sorting
     new_sets_pts[2].reverse()

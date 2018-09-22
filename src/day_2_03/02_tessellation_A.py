@@ -5,7 +5,9 @@ from compas.datastructures import Mesh
 from compas_rhino.artists.meshartist import MeshArtist
 from compas_rhino.helpers import mesh_from_guid 
 
+from compas_rhino.utilities import get_line_coordinates
 from compas_rhino.helpers import mesh_select_edges
+
 
 def delete_edges(mesh,joint_lines):
     
@@ -92,8 +94,11 @@ def get_parallel_edges(mesh, uv):
 if __name__ == '__main__':
     
     
-    guid = rs.GetObject("Select mesh", 32)
-    mesh = mesh_from_guid(Mesh,guid)
+    edge_crvs = rs.GetObjects("Select edges", 4)
+    lines = get_line_coordinates(edge_crvs)
+    rs.DeleteObjects(edge_crvs)
+    
+    mesh = Mesh.from_lines(lines, delete_boundary_face=True)
 
     # draw edges for selection
     artist = MeshArtist(mesh, layer='edges')
@@ -115,6 +120,7 @@ if __name__ == '__main__':
             
     # delete edges from mesh
     delete_edges(mesh,joint_lines)
+            
             
     # draw joint lines
     artist.draw_edges()
