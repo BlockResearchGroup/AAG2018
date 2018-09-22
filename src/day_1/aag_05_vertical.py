@@ -17,35 +17,13 @@ from compas_tna.equilibrium import vertical_from_zmax_rhino as vertical
 
 # create diagrams from serialised files
 
-form = FormDiagram.from_json('aag_04_horizontal_formdiagram.json')
-force = ForceDiagram.from_json('aag_04_horizontal_forcediagram.json')
-
 
 # compute the scale of the force diagram
 # such that the highest vertex of the form diagram is at a prescribed value
 
-zmax = 3
-
-scale = vertical(form, zmax, kmax=100)
-
-force.attributes['scale'] = scale
-
-print(scale)
 
 # draw the result
-
-form.draw(layer='AAG::FormDiagram')
-
-artist = FormArtist(form, layer='AAG::FormDiagram')
-
-artist.clear_reactions()
-artist.draw_reactions(scale=0.25)
-artist.draw_forces(scale=0.01)
-
-artist.redraw()
 
 
 # serialise the data
 
-form.to_json('aag_05_vertical_formdiagram.json')
-force.to_json('aag_05_vertical_forcediagram.json')

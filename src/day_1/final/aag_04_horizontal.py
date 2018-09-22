@@ -17,7 +17,7 @@ from compas_tna.equilibrium import horizontal_nodal_rhino as horizontal
 
 # create diagrams from serialised files
 
-form = FormDiagram.from_json('aag_02_formdiagram_smooth_area.json')
+form = FormDiagram.from_json('aag_02_formdiagram.json')
 force = ForceDiagram.from_json('aag_03_forcediagram.json')
 
 
@@ -67,5 +67,5 @@ artist.redraw()
 
 # serialise the result
 
-form.to_json('aag_04_formdiagram_horizontal.json')
-force.to_json('aag_04_forcediagram_horizontal.json')
+form.to_json('aag_04_horizontal_formdiagram.json')
+force.to_json('aag_04_horizontal_forcediagram.json')
