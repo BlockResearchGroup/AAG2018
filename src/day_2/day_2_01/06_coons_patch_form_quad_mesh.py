@@ -379,7 +379,7 @@ if __name__ == '__main__':
     coons_mesh = meshes_join([coons_mesh], cull_duplicates=True, precision=precision)
     fixed = coons_mesh.vertices_on_boundary()
     
-    #mesh_smooth_area(coons_mesh, fixed=fixed, kmax=25,damping=0.5)
+    mesh_smooth_area(coons_mesh, fixed=fixed, kmax=25,damping=0.5)
     #mesh_smooth_centroid(coons_mesh, fixed=fixed, kmax=25,damping=0.5)
     
     artist = MeshArtist(coons_mesh, layer='form_quad')

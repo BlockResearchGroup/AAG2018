@@ -15,7 +15,7 @@ def callback(k, args):
     if k%10 == 0:
         rs.Prompt(str(k))
     
-    # constrain all non-fixed to a surface
+    # constrain all non-fixed to a surface or guide curves
     for key, attr in mesh.vertices(data=True):
         if attr['fixed']:
             continue
@@ -47,30 +47,34 @@ if __name__ == '__main__':
     
     precision = '3f'
     
+    # coordinates of all fixed points as strings
     pts_fixed_geo = set([geometric_key(pt,precision=precision) for pt in pts_fixed])
     
     mesh = mesh_from_guid(Mesh,guid)
     bound = set(mesh.vertices_on_boundary())
 
+    # assign defaults to all vertex attributes 
+    mesh.update_default_vertex_attributes({'fixed': False})
+    mesh.update_default_vertex_attributes({'srf': None})
+    mesh.update_default_vertex_attributes({'crv': None})
+
     fixed = []
+    # assign attributes
     for key in mesh.vertices():
-        # set initial vertex attribute
-        mesh.set_vertex_attribute(key, 'fixed',False)
-        mesh.set_vertex_attribute(key, 'srf',None)
-        mesh.set_vertex_attribute(key, 'crv',None)
-        
         if key in bound:
             pt = mesh.vertex_coordinates(key)
             pt_geo = geometric_key(pt, precision)
+            # check if pt has same coordinates as any fixed point
             if pt_geo in pts_fixed_geo:
                 mesh.set_vertex_attribute(key, 'fixed', True)
                 fixed.append(key)
             else:
+                # assign guid of closest curve to vertex
                 mesh.set_vertex_attribute(key, 'crv', rs.PointClosestObject(pt,guid_crvs)[0])
         else:
+            # assign surface guid to vertex
             mesh.set_vertex_attribute(key, 'srf', srf)
     
-
     # initialize conduit
     conduit = MeshConduit(mesh)
 

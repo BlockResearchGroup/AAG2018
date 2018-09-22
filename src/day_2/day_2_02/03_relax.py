@@ -34,8 +34,8 @@ if __name__ == '__main__':
     mesh = mesh_from_guid(Mesh,guid)
     fixed = set(mesh.vertices_on_boundary())
 
-    for key in mesh.vertices():
-        mesh.set_vertex_attribute(key, 'srf', srf)
+    # assign srf guid to all vertex attributes 
+    mesh.update_default_vertex_attributes({'srf': srf})
 
     # initialize conduit
     conduit = MeshConduit(mesh, refreshrate=1)

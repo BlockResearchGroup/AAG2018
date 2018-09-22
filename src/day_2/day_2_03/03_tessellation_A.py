@@ -16,7 +16,7 @@ if __name__ == '__main__':
     mesh = Mesh.from_lines(lines, delete_boundary_face=True)
     
     fixed = set(mesh.vertices_on_boundary())
-    mesh_smooth_centroid(mesh, fixed=fixed, kmax=3, damping=0.5)
+    mesh_smooth_centroid(mesh, fixed=fixed, kmax=1, damping=0.5)
     
     # draw edges for selection
     artist = MeshArtist(mesh, layer='edges_hex')

@@ -19,10 +19,12 @@ def callback(k, args):
 
 if __name__ == '__main__':
     
+    # select rhino mesh
     guid = rs.GetObject("Select mesh", 32)
-    
+    # create compas mesh object from rhino mesh
     mesh = mesh_from_guid(Mesh,guid)
     
+    # set vertices on boundary as fixed
     fixed = set(mesh.vertices_on_boundary())
 
     # initialize conduit
@@ -35,7 +37,7 @@ if __name__ == '__main__':
                             kmax=100, 
                             damping=0.5, 
                             callback=callback)
-        
+    # draw mesh
     artist = MeshArtist(mesh, layer='relaxed_mesh_laplacian')
     artist.draw()
     

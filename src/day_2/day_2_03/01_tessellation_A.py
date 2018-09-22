@@ -44,7 +44,7 @@ def get_parallel_edges(mesh, uv):
 
 if __name__ == '__main__':
     
-    edge_crvs = rs.GetObjects("Select edges", 4)
+    edge_crvs = rs.GetObjects("Select tessellation edges", 4)
     lines = get_line_coordinates(edge_crvs)
     
     mesh = Mesh.from_lines(lines, delete_boundary_face=True)
