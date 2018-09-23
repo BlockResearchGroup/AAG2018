@@ -120,8 +120,24 @@ import compas_tna
 
 ## Questions
 
-*We will list here the answers to recurring questions that come up during the workshop...*
+> Q: `conda` commands don't work.
 
-| Q: "I have no administrator access to my computer. How do i install COMPAS for Rhino?"
+Try running them from the *Conda Prompt*.
+Depending on how you installed Anaconda, it might not be available by default on the normal Windows command prompt.
+
+> Q: When trying to install the framework in Rhino, it fails indicating the lib folder of IronPython does not exist.
+
+Make sure you have opened Rhino 6 and Grasshopper at least once, so that it finishes setting up all its internal folder structure.
+
+> Q: It fails when trying to install on Rhino.
+
+Try starting the command prompt as administrator.
+Depending on the version of Python, it might be required or not.
+
+> Q: I have no administrator access to my computer.
+
+First, install COMPAS from source following the instructions described in the [DevGuide](https://compas-dev.github.io/main/devguide.html).
+Then, manually add `path/to/COMPAS/src` to the Rhino Python search paths.
+
 
 
