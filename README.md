@@ -4,7 +4,9 @@
 
 ![Armadillo workflow](images/aag2018_ws3_BRG.jpg)
 
+
 ## Schedule
+
 
 ### Day 1
 
@@ -18,6 +20,7 @@
 5. Vertical equilibrium
 6. Force distribution
 
+
 ### Day 2
 
 *Fabrication design of a discrete vault*
@@ -27,17 +30,30 @@ Details coming soon...
 
 ## Getting started
 
+
 **Install COMPAS**
 
 * https://compas-dev.github.io/main/gettingstarted.html
 * https://compas-dev.github.io/main/environments/rhino.html
+
+*Note*
+
+To update use:
+
+```bash
+
+$ pip install COMPAS --upgrade
+
+```
 
 **Install compas_tna**
 
 1. Clone the repo:
 
 ```bash
+
 $ git clone https://github.com/BlockResearchGroup/compas_tna.git
+
 ```
 
 The folder `compas_tna` will contain the following:
@@ -54,8 +70,10 @@ And a bunch of other files...
 2. Install **compas_tna** from source:
 
 ```bash
+
 $ cd compas_tna
 $ pip install -e .
+
 ```
 
 **Configure Rhino**
@@ -63,7 +81,9 @@ $ pip install -e .
 1. In Rhino go to:
 
 ```
+
 Tools > PythonScript > Edit > Tools > Options
+
 ```
 
 2. Add the path to `compas_tna/src` (see above) to the *Module Search Paths*.
@@ -73,8 +93,10 @@ Tools > PythonScript > Edit > Tools > Options
 4. Test, by making a script with the following two lines and running it in Rhino. If there are no errors, all is well :)
 
 ```python
+
 import compas
 import compas_tna
+
 ```
 
 
@@ -99,3 +121,7 @@ import compas_tna
 ## Questions
 
 *We will list here the answers to recurring questions that come up during the workshop...*
+
+| Q: "I have no administrator access to my computer. How do i install COMPAS for Rhino?"
+
+
