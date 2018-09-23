@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RhinoUI major_ver="2" minor_ver="0" guid="f8d829b7-2e5d-415b-9e87-95f511c08b61" localize="False" default_language_id="1033">
+  <extend_rhino_menus>
+    <menu guid="1df96ac4-8e72-41e7-b6b3-fa3900991ccb">
+      <text>
+        <locale_1033>Extend Rhino Menus</locale_1033>
+      </text>
+    </menu>
+  </extend_rhino_menus>
+  <menus />
+  <tool_bar_groups>
+    <tool_bar_group guid="149d51b4-e1a7-4dee-86d1-f0a82ea38414" dock_bar_guid32="00000000-0000-0000-0000-000000000000" dock_bar_guid64="4e01223f-08e7-4cd0-ab96-46215e53a2f5" active_tool_bar_group="f992fbd5-a4c5-42bb-b280-7bbf7e93771f" single_file="False" hide_single_tab="False" point_floating="-5,125">
+      <text>
+        <locale_1033>TNA</locale_1033>
+      </text>
+      <tool_bar_group_item guid="743c5ee1-8900-4987-956c-de4cd8aff816" major_version="1" minor_version="1">
+        <text>
+          <locale_1033>TNA</locale_1033>
+        </text>
+        <tool_bar_id>03360c5f-47d2-42e0-bfbd-9d088f74766a</tool_bar_id>
+      </tool_bar_group_item>
+      <tool_bar_group_item guid="f8f37c7f-60ba-4af2-9315-2deacf004eb2" major_version="1" minor_version="1">
+        <text>
+          <locale_1033>TNA.form</locale_1033>
+        </text>
+        <tool_bar_id>f31cd4e4-0e88-4929-aa05-c6cc5980bee5</tool_bar_id>
+      </tool_bar_group_item>
+      <tool_bar_group_item guid="88f08016-3012-4812-82c1-143b5fb01549" major_version="1" minor_version="1">
+        <text>
+          <locale_1033>TNA.force</locale_1033>
+        </text>
+        <tool_bar_id>270f1696-ee52-42ce-8f8f-931ce7826a17</tool_bar_id>
+      </tool_bar_group_item>
+      <tool_bar_group_item guid="69f7575a-c5a7-46a2-90e8-e3c84413abf9" major_version="1" minor_version="1">
+        <text>
+          <locale_1033>TNA.equilibrium</locale_1033>
+        </text>
+        <tool_bar_id>e1ce978e-b125-42c6-979f-69ef1df6076d</tool_bar_id>
+      </tool_bar_group_item>
+      <tool_bar_group_item guid="f992fbd5-a4c5-42bb-b280-7bbf7e93771f" major_version="1" minor_version="1">
+        <text>
+          <locale_1033>TNA.visualisation</locale_1033>
+        </text>
+        <tool_bar_id>47c41a5c-4d70-41af-846e-02b2f1902530</tool_bar_id>
+      </tool_bar_group_item>
+      <dock_bar_info dock_bar="False" docking="True" horz="False" visible="True" floating="False" mru_float_style="8192" bar_id="59460" mru_width="32767" point_pos="0,111" float_point="-5,125" rect_mru_dock_pos="0,111,1680,168" dock_location_u="59419" dock_location="top" float_size="56,58" />
+    </tool_bar_group>
+  </tool_bar_groups>
+  <tool_bars>
+    <tool_bar guid="03360c5f-47d2-42e0-bfbd-9d088f74766a" item_display_style="text_only">
+      <text>
+        <locale_1033>TNA</locale_1033>
+      </text>
+      <tool_bar_item guid="8af7117d-e355-4e08-a872-e71eed99ffe5" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>31eabbd6-72b4-4083-8b49-102888c0f024</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="9b22b2de-9df0-4801-aaf0-5772b74c7904" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>a721e098-57a4-4978-90d3-d2cadb7b536a</left_macro_id>
+      </tool_bar_item>
+    </tool_bar>
+    <tool_bar guid="f31cd4e4-0e88-4929-aa05-c6cc5980bee5" item_display_style="text_only">
+      <text>
+        <locale_1033>TNA.form</locale_1033>
+      </text>
+      <tool_bar_item guid="2d945246-8077-4c0d-b0b8-7e60f5d4b55d" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>07d564d8-72f6-4ee6-980c-415fe7d5d174</left_macro_id>
+        <right_macro_id>3c4204ce-504c-4fe3-8c7a-9dc61c3368c7</right_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="4e7f82fc-8efa-435b-b6cd-47ab337aff1a" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>7e4451ea-cd62-497c-8dfb-9a5b7dee5e16</left_macro_id>
+        <right_macro_id>63b24924-e422-4cba-8794-2bdc2801ffe9</right_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="80246f9a-81a4-4816-8d27-a31a26e4b9d6" button_display_mode="control_only" button_style="spacer">
+        <text />
+      </tool_bar_item>
+      <tool_bar_item guid="229f0f7b-d7d7-491e-845a-63bb76384724" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>3312c4b7-56b5-4a68-8033-45bb560ad969</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="8ce5cf31-9b6f-4e2f-9a64-1fd84ef8b7b2" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>9d84d944-4805-4414-a4f9-8a685e80f82a</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="f4d310e1-9e4c-487b-ac8d-844ba9734db5" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>7f6d5d7a-41f5-476b-8776-724b4296d4c4</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="8b6dcd8c-7d53-47b7-8311-4007a193af6b" button_display_mode="control_only" button_style="spacer">
+        <text />
+      </tool_bar_item>
+      <tool_bar_item guid="c4dbfe91-ba4e-4c9a-ad21-da94111ca7b6" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>775accf6-2dca-4677-8603-eec89ecd010b</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="fd943608-4b4b-4662-af48-e82b25924486" button_display_mode="control_only" button_style="spacer">
+        <text />
+      </tool_bar_item>
+      <tool_bar_item guid="3c43252a-b125-43c6-9f63-1c431f3755a7" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>ea1bdec3-10b2-44e3-af8a-26f71566f918</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="d4ab80f4-42a7-4615-9e3e-d3bb2fe328da" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>d4db079d-8758-4cbe-a592-9f47b7f6d27b</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="94f9c857-e705-48d5-b8c4-82d3117aeca5" button_display_mode="control_only" button_style="spacer">
+        <text />
+      </tool_bar_item>
+      <tool_bar_item guid="a4504e64-960c-4670-b4eb-d9f1beb262cf" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>937496fd-58f6-421c-8749-fff10ca1db09</left_macro_id>
+      </tool_bar_item>
+    </tool_bar>
+    <tool_bar guid="270f1696-ee52-42ce-8f8f-931ce7826a17" item_display_style="text_only">
+      <text>
+        <locale_1033>TNA.force</locale_1033>
+      </text>
+      <tool_bar_item guid="f54e1f1d-7ca6-4e47-a38a-1a288bcccdc9" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>1969238e-1d3d-4ba6-83fb-d0573735dc00</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="b77adc67-418c-41e8-a9e7-9fb2ad3290e1" button_display_mode="control_only" button_style="spacer">
+        <text />
+      </tool_bar_item>
+      <tool_bar_item guid="206d1aa5-7ed4-4bef-85de-3c05f0977f45" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>f6b37ff2-fc42-4a86-a312-531485288a58</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="f2f179c9-a11f-4e0f-a587-153c0c5664dd" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>6429d531-2e04-419d-902f-3ec964b0d035</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="643290c1-271c-401e-b035-85dba5fe222d" button_display_mode="control_only" button_style="spacer">
+        <text />
+      </tool_bar_item>
+      <tool_bar_item guid="eec66865-9ecb-44ca-bead-c81de350cf46" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>ef5ce87a-b787-43f5-b5e3-7d87a3154f26</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="521b916c-af06-4b1b-a736-d857a56875cb" button_display_mode="control_only" button_style="spacer">
+        <text />
+      </tool_bar_item>
+      <tool_bar_item guid="ba0c0d9c-7c8a-46a8-b3e0-b0a68b9f67f8" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>e8a5181f-9ac0-4cb1-b323-a75f69a8738f</left_macro_id>
+      </tool_bar_item>
+    </tool_bar>
+    <tool_bar guid="e1ce978e-b125-42c6-979f-69ef1df6076d" item_display_style="text_only">
+      <text>
+        <locale_1033>TNA.equilibrium</locale_1033>
+      </text>
+      <tool_bar_item guid="78c1dddc-a3c8-44cb-a6ca-f647eb5a9644" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>b675cda6-4336-4301-a669-6240c9fb8c13</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="882390f4-f2e8-4951-8d8b-a276b3b9cdf5" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>2958e410-6d3f-4f1d-9aab-e2a573ee0f11</left_macro_id>
+      </tool_bar_item>
+    </tool_bar>
+    <tool_bar guid="47c41a5c-4d70-41af-846e-02b2f1902530" item_display_style="text_only">
+      <text>
+        <locale_1033>TNA.visualisation</locale_1033>
+      </text>
+      <tool_bar_item guid="a395a7d6-74c9-444b-8c9c-c3abd607840f" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>3cf8fad4-4e0e-4c63-8e69-66dfecbbec47</left_macro_id>
+        <right_macro_id>4574decb-4f1f-4d1d-bc5f-e1853117d2af</right_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="01f11fe2-76db-465a-9672-cef6aec5ce26" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>e5e46567-0b5c-48ad-9250-fc16e8d8f46e</left_macro_id>
+        <right_macro_id>2be6e090-8934-44ca-aaab-7a4d7d5b5419</right_macro_id>
+      </tool_bar_item>
+    </tool_bar>
+  </tool_bars>
+  <macros>
+    <macro_item guid="3cf8fad4-4e0e-4c63-8e69-66dfecbbec47">
+      <text>
+        <locale_1033>tna.show_forces</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>forces</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>show forces</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.show_forces())</script>
+    </macro_item>
+    <macro_item guid="ef5ce87a-b787-43f5-b5e3-7d87a3154f26">
+      <text>
+        <locale_1033>tna.force_move</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>move</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>force move</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.force_move())</script>
+    </macro_item>
+    <macro_item guid="31eabbd6-72b4-4083-8b49-102888c0f024">
+      <text>
+        <locale_1033>tna.init</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>init</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>init</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript ResetEngine ( import rhinoscriptsyntax as rs; import sys; import os; path = rs.ToolbarCollectionPath('tna'); path = os.path.dirname(path); sys.path.insert(0, path); from frontcontroller import TNAFrontController; tna = TNAFrontController(); tna.init(); )</script>
+    </macro_item>
+    <macro_item guid="d4db079d-8758-4cbe-a592-9f47b7f6d27b">
+      <text>
+        <locale_1033>tna.form_select_edges</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>E_select</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>form select edges</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.form_select_edges())</script>
+    </macro_item>
+    <macro_item guid="1969238e-1d3d-4ba6-83fb-d0573735dc00">
+      <text>
+        <locale_1033>tna.force_from_form</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>from_form</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>force from form</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.force_from_form())</script>
+    </macro_item>
+    <macro_item guid="9d84d944-4805-4414-a4f9-8a685e80f82a">
+      <text>
+        <locale_1033>tna.form_update_edge_attr</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>E_attr</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>form update edge attr</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.form_update_edge_attr())</script>
+    </macro_item>
+    <macro_item guid="6429d531-2e04-419d-902f-3ec964b0d035">
+      <text>
+        <locale_1033>tna.force_update_edge_attr</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>E_attr</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>force update edge attr</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.force_update_edge_attr())</script>
+    </macro_item>
+    <macro_item guid="4574decb-4f1f-4d1d-bc5f-e1853117d2af">
+      <text>
+        <locale_1033>tna.hide_forces</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>hide_forces</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>hide forces</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.hide_forces())</script>
+    </macro_item>
+    <macro_item guid="ea1bdec3-10b2-44e3-af8a-26f71566f918">
+      <text>
+        <locale_1033>tna.form_select_vertices</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>V_select</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>form select vertices</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.form_select_vertices())</script>
+    </macro_item>
+    <macro_item guid="937496fd-58f6-421c-8749-fff10ca1db09">
+      <text>
+        <locale_1033>tna.form_update_attributes</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>settings</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>form update attributes</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.form_update_attributes())</script>
+    </macro_item>
+    <macro_item guid="3c4204ce-504c-4fe3-8c7a-9dc61c3368c7">
+      <text>
+        <locale_1033>tna.form_to_mesh</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>form_to_mesh</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>form to mesh</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.form_to_mesh())</script>
+    </macro_item>
+    <macro_item guid="3312c4b7-56b5-4a68-8033-45bb560ad969">
+      <text>
+        <locale_1033>tna.form_update_vertex_attr</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>V_attr</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>form update vertex attr</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.form_update_vertex_attr())</script>
+    </macro_item>
+    <macro_item guid="7f6d5d7a-41f5-476b-8776-724b4296d4c4">
+      <text>
+        <locale_1033>tna.form_update_face_attr</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>F_attr</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>form update face attr</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.form_update_face_attr())</script>
+    </macro_item>
+    <macro_item guid="e5e46567-0b5c-48ad-9250-fc16e8d8f46e">
+      <text>
+        <locale_1033>tna.show_reactions</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>reactions</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>show reactions</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.show_reactions())</script>
+    </macro_item>
+    <macro_item guid="a721e098-57a4-4978-90d3-d2cadb7b536a">
+      <text>
+        <locale_1033>tna.update_settings</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>settings</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>update settings</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.update_settings())</script>
+    </macro_item>
+    <macro_item guid="b675cda6-4336-4301-a669-6240c9fb8c13">
+      <text>
+        <locale_1033>tna.update_horizontal</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>horizontal</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>update horizontal</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.update_horizontal())</script>
+    </macro_item>
+    <macro_item guid="2958e410-6d3f-4f1d-9aab-e2a573ee0f11">
+      <text>
+        <locale_1033>tna.update_vertical</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>vertical</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>update vertical</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.update_vertical())</script>
+    </macro_item>
+    <macro_item guid="63b24924-e422-4cba-8794-2bdc2801ffe9">
+      <text>
+        <locale_1033>tna.form_to_json</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>form_to_json</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>form to json</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.form_to_json())</script>
+    </macro_item>
+    <macro_item guid="f6b37ff2-fc42-4a86-a312-531485288a58">
+      <text>
+        <locale_1033>tna.force_update_vertex_attr</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>V_attr</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>force update vertex attr</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.force_update_vertex_attr())</script>
+    </macro_item>
+    <macro_item guid="07d564d8-72f6-4ee6-980c-415fe7d5d174">
+      <text>
+        <locale_1033>tna.form_from_mesh</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>mesh</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>form from mesh</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.form_from_mesh())</script>
+    </macro_item>
+    <macro_item guid="e8a5181f-9ac0-4cb1-b323-a75f69a8738f">
+      <text>
+        <locale_1033>tna.force_update_attributes</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>settings</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>force update attributes</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.force_update_attributes())</script>
+    </macro_item>
+    <macro_item guid="775accf6-2dca-4677-8603-eec89ecd010b">
+      <text>
+        <locale_1033>tna.form_smooth_area</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>smooth</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>form smooth area</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.form_smooth_area())</script>
+    </macro_item>
+    <macro_item guid="2be6e090-8934-44ca-aaab-7a4d7d5b5419">
+      <text>
+        <locale_1033>tna.hide_reactions</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>hide_reactions</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>hide reactions</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.hide_reactions())</script>
+    </macro_item>
+    <macro_item guid="7e4451ea-cd62-497c-8dfb-9a5b7dee5e16">
+      <text>
+        <locale_1033>tna.form_from_json</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>None</locale_1033>
+      </tooltip>
+      <help_text>
+        <locale_1033>None</locale_1033>
+      </help_text>
+      <button_text>
+        <locale_1033>json</locale_1033>
+      </button_text>
+      <menu_text>
+        <locale_1033>form from json</locale_1033>
+      </menu_text>
+      <script>-_RunPythonScript (tna.form_from_json())</script>
+    </macro_item>
+  </macros>
+  <bitmaps>
+    <small_bitmap item_width="16" item_height="16">
+      <bitmap>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAATSURBVDhPYxgFo2AUjAIwYGAAAAQQAAGnRHxj
+AAAAAElFTkSuQmCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</bitmap>
+    </small_bitmap>
+    <normal_bitmap item_width="24" item_height="24">
+      <bitmap>iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYSURBVEhL7cEBAQAAAIIg/6+uIUAAAFwNCRgA
+AdACW14AAAAASUVORK5CYIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</bitmap>
+    </normal_bitmap>
+    <large_bitmap item_width="32" item_height="32">
+      <bitmap>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAaSURBVFhH7cEBAQAAAIIg/69uSEAAAADAuRoQ
+IAABnXhJQwAAAABJRU5ErkJgggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</bitmap>
+    </large_bitmap>
+  </bitmaps>
+  <scripts />
+</RhinoUI>

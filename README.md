@@ -138,6 +138,3 @@ Depending on the version of Python, it might be required or not.
 
 First, install COMPAS from source following the instructions described in the [DevGuide](https://compas-dev.github.io/main/devguide.html).
 Then, manually add `path/to/COMPAS/src` to the Rhino Python search paths.
-
-
-
