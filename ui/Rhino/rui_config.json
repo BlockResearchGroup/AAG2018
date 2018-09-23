@@ -64,6 +64,7 @@
         {
             "name"  : "TNA.visualisation", 
             "items" : [
+                { "text" : "angles",    "left" : "tna.show_angles",    "right" : "tna.hide_angles" },
                 { "text" : "forces",    "left" : "tna.show_forces",    "right" : "tna.hide_forces" },
                 { "text" : "reactions", "left" : "tna.show_reactions", "right" : "tna.hide_reactions" }
             ]

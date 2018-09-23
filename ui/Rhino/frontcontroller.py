@@ -42,6 +42,8 @@ class TNAFrontController(object):
     instancename = 'tna'
 
     def __init__(self):
+        self.form = None
+        self.force = None
         self.settings = {
             'form.layer'       : 'AAG::FormDiagram',
             'force.layer'      : 'AAG::ForceDiagram',
@@ -129,7 +131,7 @@ class TNAFrontController(object):
         fixed  = list(self.form.vertices_where({'is_anchor': True}))
         fixed += list(self.form.vertices_where({'is_fixed': True}))
         fixed += [key for fkey in self.form.faces_where({'is_loaded': False}) for key in self.form.face_vertices(fkey)]
-        mesh_smooth_area(form, fixed=list(set(fixed)), kmax=50)
+        mesh_smooth_area(self.form, fixed=list(set(fixed)), kmax=50)
         self.form.draw(layer=self.settings['form.layer'])
 
     def form_select_vertices(self):
@@ -205,6 +207,28 @@ class TNAFrontController(object):
     def hide_reactions(self):
         artist = FormArtist(self.form, layer=self.settings['form.layer'])
         artist.clear_reactions()
+        artist.redraw()
+
+    def show_angles(self):
+        angles = self.form.get_edges_attribute('a')
+        amin = min(angles)
+        amax = max(angles)
+        adif = amax - amin
+        text = {}
+        color = {}
+        for u, v, attr in self.form.edges_where({'is_edge': True}, True):
+            a = attr['a']
+            if a > 5:
+                text[u, v] = "{:.1f}".format(a)
+                color[u, v] = i_to_green((a - amin) / adif)
+        artist = FormArtist(self.form, layer=self.settings['form.layer'])
+        artist.clear_edgelabels()
+        artist.draw_edgelabels(text=text, color=color)
+        artist.redraw()
+
+    def hide_angles(self):
+        artist = FormArtist(self.form, layer=self.settings['form.layer'])
+        artist.clear_edgelabels()
         artist.redraw()
 
 
