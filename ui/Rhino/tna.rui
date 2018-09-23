@@ -9,7 +9,7 @@
   </extend_rhino_menus>
   <menus />
   <tool_bar_groups>
-    <tool_bar_group guid="819f16b4-4d0d-4eaf-9822-f9e38978fc6b" dock_bar_guid32="00000000-0000-0000-0000-000000000000" dock_bar_guid64="f00d6dbe-0150-476e-b826-8b4137bf362e" active_tool_bar_group="e9cd97bc-61f6-4bc8-ba37-b1681876fe05" single_file="False" hide_single_tab="False" point_floating="-3,126">
+    <tool_bar_group guid="819f16b4-4d0d-4eaf-9822-f9e38978fc6b" dock_bar_guid32="00000000-0000-0000-0000-000000000000" dock_bar_guid64="16b4509e-2436-4ff0-9f2d-f8f31b531c85" active_tool_bar_group="59fc465f-ebcb-41f2-9681-4d72e50a776a" single_file="False" hide_single_tab="False" point_floating="-3,126">
       <text>
         <locale_1033>TNA</locale_1033>
       </text>
@@ -43,7 +43,7 @@
         </text>
         <tool_bar_id>852326c6-3215-4da4-a25b-390f9b79a0d8</tool_bar_id>
       </tool_bar_group_item>
-      <dock_bar_info dock_bar="False" docking="True" horz="False" visible="True" floating="False" mru_float_style="8192" bar_id="59460" mru_width="32767" point_pos="0,111" float_point="-3,126" rect_mru_dock_pos="0,111,1680,168" dock_location_u="59419" dock_location="top" float_size="56,58" />
+      <dock_bar_info dock_bar="False" docking="True" horz="False" visible="True" floating="False" mru_float_style="8192" bar_id="59459" mru_width="32767" point_pos="0,111" float_point="-3,126" rect_mru_dock_pos="0,111,1680,168" dock_location_u="59419" dock_location="top" float_size="56,58" />
     </tool_bar_group>
   </tool_bar_groups>
   <tool_bars>

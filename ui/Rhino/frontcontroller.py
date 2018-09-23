@@ -27,6 +27,11 @@ from compas_tna.equilibrium import vertical_from_zmax_rhino as vertical
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 
+try:
+    import rhinoscriptsyntax as rs
+except ImportError:
+    pass
+
 
 __author__    = ['Tom Van Mele', ]
 __copyright__ = 'Copyright 2016 - Block Research Group, ETH Zurich'
@@ -88,10 +93,17 @@ class TNAFrontController(object):
         self.form.draw(layer=self.settings['form.layer'])
 
     def form_to_json(self):
-        folder = compas_rhino.select_folder(folder=HERE)
+        folder = compas_rhino.select_folder(default=HERE)
         if not folder:
             return
-        path = os.path.join(folder, 'formdiagram.json')
+        name = rs.GetString('Name of the formdiagram', 'formdiagram.json')
+        if not name:
+            return
+        parts = name.split('.')
+        if parts[-1] != 'json':
+            parts.append('json')
+            name = ".".join(parts)
+        path = os.path.join(folder, name)
         if not path:
             return
         self.form.to_json(path)
