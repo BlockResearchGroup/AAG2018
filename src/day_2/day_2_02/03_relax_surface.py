@@ -12,7 +12,7 @@ from compas_rhino.conduits import MeshConduit
 # callback function executed inside the smoothing loop
 def callback(k, args):
     if k%10 == 0:
-        rs.Prompt(str(k))
+        print k
     
     # constrain all non-fixed to a surface
     for key, attr in mesh.vertices(data=True):
@@ -33,6 +33,7 @@ if __name__ == '__main__':
     
     mesh = mesh_from_guid(Mesh,guid)
     fixed = set(mesh.vertices_on_boundary())
+    fixed = list(mesh.vertices_where({'vertex_degree': 2}))
 
     # assign srf guid to all vertex attributes 
     mesh.update_default_vertex_attributes({'srf': srf})

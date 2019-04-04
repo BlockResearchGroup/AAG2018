@@ -1,8 +1,11 @@
 from __future__ import print_function
 
+import os
 import compas
 import compas_rhino
 import compas_tna
+
+compas_tna.TEMP = os.path.join(os.path.dirname(__file__), 'tmp')
 
 from compas.utilities import i_to_green
 
@@ -13,7 +16,6 @@ from compas_tna.rhino import FormArtist
 from compas_tna.rhino import DiagramHelper
 
 from compas_tna.equilibrium import horizontal_nodal_rhino as horizontal
-
 
 # create diagrams from serialised files
 
